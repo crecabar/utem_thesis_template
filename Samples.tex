@@ -1,0 +1,72 @@
+% This file contains some table and images samples to copy them into project as needed.
+
+\begin{figuraenv}
+\includegraphics[width=10cm]{llama.jpg}
+\caption[This label goes to the TOC]{This description goes bellow the inserted image}\label{label to reference the image into text}
+\end{figuraenv}
+
+\begin{longtable}{| r | p{4cm} | p{4cm} |}
+  \hline
+  \cellcolor{lightgray}\textbf{} & \cellcolor{lightgray}\textbf{Forma Diferencial} & \cellcolor{lightgray}\textbf{Forma Integral} \\
+  \hline
+  \endhead
+  \cellcolor{lightgray}\textbf{1.ª Ley de Maxwell} & 
+  \begin{equation}
+    \vec{\nabla}\cdot\vec{E} = 0
+  \end{equation} &
+  \begin{equation}
+    \oint_{S} \vec{E} \cdot d\vec{S} = 0
+  \end{equation} \\
+  \hline
+  \cellcolor{lightgray}\textbf{2.ª Ley de Maxwell} & 
+  \begin{equation}
+    \vec{\nabla}\cdot\vec{B} = 0
+  \end{equation} &
+  \begin{equation}
+    \oint_{S} \vec{B} \cdot d\vec{S} = 0
+  \end{equation} \\
+  \hline
+  \cellcolor{lightgray}\textbf{3.ª Ley de Maxwell} & 
+  \begin{equation}
+    \vec{\nabla}\times\vec{E} = -\dfrac{\partial \vec{B}}{\partial t}
+  \end{equation} &
+  \begin{equation}
+    \oint_{C} \vec{E} \cdot d\vec{l} = - \dfrac{d\Phi_{B}}{dt}
+  \end{equation} \\
+  \hline
+  \cellcolor{lightgray}\textbf{4.ª Ley de Maxwell} & 
+  \begin{equation}
+    \vec{\nabla}\times\vec{B} = \mu\varepsilon \dfrac{\partial \vec{E}}{\partial t}
+  \end{equation} &
+  \begin{equation}
+    \oint_{C} \vec{B} \cdot d\vec{l} = \mu\varepsilon \dfrac{d\Phi_{E}}{dt}
+  \end{equation} \\
+  \hline
+  \caption[Leyes de Maxwell en ausencia de cargas y corrientes eleéctricas]{Leyes de Maxwell en ausencia de cargas y corrientes eléctricas}\label{tab:MaxwellsLaws}
+\end{longtable}
+
+
+\begin{longtable}{| l | l | p{2cm} | p{2cm} | p{3cm} |}
+  \hline
+  \multicolumn{2}{| c |}{\cellcolor{gray}\textbf{Región del Espectro}} & \cellcolor{gray}\textbf{Rango de longitudes de onda ($\lambda$)} & \cellcolor{gray}\textbf{Rango de frecuencias ($f$)} & \cellcolor{gray}\textbf{Aplicaciones mas habituales} \\
+  \hline
+  \endhead
+  \multirow{3}{*}{\cellcolor{lightgray}\textbf{Radio}} 
+    \cellcolor{lightgray} & \cellcolor{lightgray}\textbf{Onda Larga} & $>$ 10 m & $<$ 30 MHz & Señales de radio (AM) y comunicación submarina \\
+    \cline{2-5}
+    \cellcolor{lightgray} & \cellcolor{lightgray}\textbf{Onda Corta} & 10 cm - 10 m & 30 MHz - 3GHz & Señales de radio (FM), Señales de TV \\
+    \cline{2-5}
+    \cellcolor{lightgray} & \cellcolor{lightgray}\textbf{Microondas} & 1 mm - 10 cm & 3 - 300GHz & Radar, Redes inalámbricas, Hornos de microondas \\
+    \hline
+  \multicolumn{2}{| c |}{\cellcolor{lightgray}\textbf{Infrarrojos}} & 700 nm - 1 mm & 300GHz - 400 THz & Termografías, Visión nocturna, Controles remotos \\
+  \hline
+  \multicolumn{2}{| c |}{\cellcolor{lightgray}\textbf{Luz visible}} & 400 - 700 nm & 400 - 700 THz & Instrumentos ópticos \\
+  \hline
+  \multicolumn{2}{| c |}{\cellcolor{lightgray}\textbf{Ultravioleta}} & 10 - 400 nm & 700 THz - 30 PHz & Medicina, Espectrofotometría \\
+  \hline
+  \multicolumn{2}{| c |}{\cellcolor{lightgray}\textbf{Rayos X}} & 10 pm - 10 nm & 30 PHz - 30 EHz & Radiografía diagnóstica, Cristalografía \\
+  \hline
+  \multicolumn{2}{| c |}{\cellcolor{lightgray}\textbf{Rayos $\gamma$}} & $<$ 10 pm & $>$ 30EHz & Esterilización, Radioterapia \\
+  \hline
+  \caption[Aplicaciones de los distintos tipos de radiación electromagnética]{Aplicaciones de los distintos tipos de radiación electromagnética.}\label{table:waveLenghtApp}
+\end{longtable}
