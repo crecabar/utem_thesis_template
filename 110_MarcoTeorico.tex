@@ -9,18 +9,52 @@
 %-------------------------------------------------------------------------
 \chapter{Marco Teórico y Metodología}
 \label{chap:MarcoTeorico}
-%-------------------------------------------------------------------------
-%\begin{itemize}
-% \item Definir el rango de longitud de onda a trabajar.
-% \item Estudiar la estructura del receptor de radio.
-% \item Estudiar la estructura de las señales capturadas por el receptor de radio.
-% \item Estudiar técnicas existentes para digitalización de señales.
-% \item Estudiar las técnicas y estructuras existentes para el almacenamiento de datos científicos.
-% \item Identificar las diversas aplicaciones disponibles para reducción de datos astronómicos.
-% \item Implementar una herramienta de reducción de datos según la estructura estudiada. 
-%\end{itemize}
+Los textos en latex se componen de diversas partes, pero básicamente podemos dividirlas en dos: el preámbulo y el documento en sí. En el preámbulo se definen comandos y los paquetes de latex que se utilizarán para escribir el documento. Este documento define algunos comandos y directorios para facilitar algunas cosas.
 
 \section{Introducción}
 \label{sec:introduction}
 
+\begin{figuraenv}
+\includegraphics[width=10cm]{llama.jpg}
+\caption[This label goes to the TOC]{This description goes bellow the inserted image}\label{label to reference the image into text}
+\end{figuraenv}
 
+\begin{longtable}{| r | p{4cm} | p{4cm} |}
+  \hline
+  \cellcolor{lightgray}\textbf{} & \cellcolor{lightgray}\textbf{Forma Diferencial} & \cellcolor{lightgray}\textbf{Forma Integral} \\
+  \hline
+  \endhead
+  \cellcolor{lightgray}\textbf{1.ª Ley de Maxwell} & 
+  \begin{equation}
+    \vec{\nabla}\cdot\vec{E} = 0
+  \end{equation} &
+  \begin{equation}
+    \oint_{S} \vec{E} \cdot d\vec{S} = 0
+  \end{equation} \\
+  \hline
+  \cellcolor{lightgray}\textbf{2.ª Ley de Maxwell} & 
+  \begin{equation}
+    \vec{\nabla}\cdot\vec{B} = 0
+  \end{equation} &
+  \begin{equation}
+    \oint_{S} \vec{B} \cdot d\vec{S} = 0
+  \end{equation} \\
+  \hline
+  \cellcolor{lightgray}\textbf{3.ª Ley de Maxwell} & 
+  \begin{equation}
+    \vec{\nabla}\times\vec{E} = -\dfrac{\partial \vec{B}}{\partial t}
+  \end{equation} &
+  \begin{equation}
+    \oint_{C} \vec{E} \cdot d\vec{l} = - \dfrac{d\Phi_{B}}{dt}
+  \end{equation} \\
+  \hline
+  \cellcolor{lightgray}\textbf{4.ª Ley de Maxwell} & 
+  \begin{equation}
+    \vec{\nabla}\times\vec{B} = \mu\varepsilon \dfrac{\partial \vec{E}}{\partial t}
+  \end{equation} &
+  \begin{equation}
+    \oint_{C} \vec{B} \cdot d\vec{l} = \mu\varepsilon \dfrac{d\Phi_{E}}{dt}
+  \end{equation} \\
+  \hline
+  \caption[Leyes de Maxwell en ausencia de cargas y corrientes eleéctricas]{Leyes de Maxwell en ausencia de cargas y corrientes eléctricas}\label{tab:MaxwellsLaws}
+\end{longtable}

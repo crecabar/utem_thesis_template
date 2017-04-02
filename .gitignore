@@ -14,10 +14,11 @@ Tesis.ind
 Tesis.lof
 Tesis.log
 Tesis.lot
-Tesis.pdf
+Tesis.out
 Tesis.toc
 Tesis.xdy
 Tesis.synctex.gz
+Tesis.texnicle
 typeset.log
 .DS_Store
 images/.DS_Store

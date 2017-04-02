@@ -6,23 +6,18 @@
 % Cristian Recabarren 2016                                                    %
 %                                                                             %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 \usepackage[utf8]{inputenc}
-\usepackage[english,greek,spanish]{babel}
+\usepackage[english,greek,spanish,es-tabla]{babel}
 \usepackage[pdftex]{graphicx}
+\usepackage{hyperref,xpatch} %[unicode=true]
+\usepackage[titletoc,toc,page]{appendix}
 \usepackage{float}
 \usepackage{setspace}
-\ifdefined\FINAL{}
-\usepackage[paperwidth=216mm,paperheight=330mm,tmargin=25mm,bmargin=30mm,lmargin=30mm,rmargin=20mm,footskip=10mm,headsep=0mm]{geometry}
-\else
-\usepackage[paperwidth=216mm,paperheight=279mm,tmargin=25mm,bmargin=30mm,lmargin=30mm,rmargin=20mm,footskip=10mm,headsep=0mm]{geometry}
-\fi 
+\usepackage[paperwidth=216mm,paperheight=330mm,tmargin=40mm,bmargin=40mm,lmargin=50mm,rmargin=20mm,footskip=10mm,headsep=0mm]{geometry}
 \usepackage{tocbibind}
-%\usepackage{cite}
 \usepackage[square,super,sort]{natbib}
 \usepackage{datetime}
 \usepackage{fancyref}
-\usepackage{nameref}
 \usepackage{amsmath}
 \usepackage{amsthm}
 \usepackage{amsfonts}
@@ -36,56 +31,36 @@
 \usepackage[xindy]{imakeidx}
 \usepackage{multirow}
 \usepackage{longtable}
-
+\usepackage{wrapfig}
+\usepackage{tikz}
+\usepackage{rotating}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{colortbl}
 %-------------------------------------------------------------------------------
-
+\def\checkmark{\tikz\fill[scale=0.4](0,.35) -- (.25,0) -- (1,.7) -- (.25,.15) -- cycle;}
+%-------------------------------------------------------------------------------
 \definecolor{lightgray}{gray}{0.82}
 \definecolor{gray}{gray}{0.72}
-
 %-------------------------------------------------------------------------------
-
 \makeglossaries{}
 \makeindex{}
-
 %-------------------------------------------------------------------------
 %definición de comandos
-
 \newcommand{\dotrule}[1]{\parbox[t]{#1}{\dotfill}}
-
 %para código fuente
 \newenvironment{codigoenv}
 {\fontsize{10pt}{12pt} \linespread{1}} { \normalsize}
-
-%para las imagenes
+%para las imágenes
 \newenvironment{figuraenv}
-{\begin{figure}[h!]\begin{center}} {\end{center}\end{figure}}
-
+{\begin{figure}[hbt!]\begin{center}} {\end{center}\end{figure}}
+%ubicación de las imágenes
 \graphicspath{{./images/}}
-
-%para las ecuaciones
-%\newaliascnt{eqfloat}{equation}
-%\newfloat{eqfloat}{h}{eqflts}
-%\floatname{eqfloat}{Equation}
-%\newcommand*{\ORGeqfloat}{}
-%\let\ORGeqfloat\eqfloat
-%\def\eqfloat{%
-%  \let\ORIGINALcaption\caption
-%  \def\caption{%
-%    \addtocounter{equation}{-1}%
-%    \ORIGINALcaption
-%  }%
-%  \ORGeqfloat
-%}
-
+%---------------------------------------------------------------------------
 \newcommand{\df}[2]{\textit{#1 (#2)}} %definicion de termino y sigla
 \newcommand{\cls}[1]{\mbox{\textit{#1}}} %nombre de clase o paquete o código
 \newcommand{\trm}[1]{\textit{#1}} %termino tecnico o en ingles
 \newcommand{\cod}[1]{\texttt{\footnotesize #1}} %codigo fuente
-
-%-------------------------------------------------------------------------
-%\newcommand{\textgreek}[1]
-%    {\bgroup\greekfont{#1}\egroup} % Greek text
-%-------------------------------------------------------------------------
 
 \linespread{1}
 \setlength{\parskip}{1\baselineskip}

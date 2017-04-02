@@ -5,15 +5,8 @@
 % Cristian Recabarren 2016                                                    %
 %                                                                             %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%\newcommand*{\FINAL}{} % Para definir si es el documento final e incluir portada, abstract y agradecimientos
-\ifdefined\FINAL{}
 \documentclass[legalpaper,10pt,final]{report} % Final, legal papper
-\else
-\documentclass[letterpaper,10pt,final]{report} % Draft, letter papper
-\fi
-%
 \include{020_headers}
-%
 %
 \include{090_glosario}
 \include{091_aconym}
@@ -25,9 +18,10 @@
 \begin{document}
 \newtheorem{mydef}{Definición}
 %
-\ifdefined\FINAL{}
-%
 \include{030_front}
+\include{031_meta}
+%
+\include{042_acknowledges}
 %
 \selectlanguage{spanish}
 \include{041_abstract_es}
@@ -35,12 +29,8 @@
 \include{040_abstract_en}
 \selectlanguage{spanish}
 %
-\include{042_acknowledges}
-%
-\fi
-%
 \pagenumbering{roman}
-\setcounter{tocdepth}{3} % Include subsubsections
+\setcounter{tocdepth}{4} % Include subsubsections
 \tableofcontents
 \listoffigures
 \listoftables
@@ -50,26 +40,27 @@
 \pagenumbering{arabic}
 %
 \citeindextrue{}
-\ifdefined\FINAL{}
 \doublespacing{}
-\fi
 \include{000_Introduccion}
 \include{110_MarcoTeorico}
 \include{210_DisenoInvestigacion}
 \include{410_AnalisisDeResultados}
 \include{510_Conclusiones}
-\clearpage
-\appendix
-\clearpage
-\addappheadtotoc
-\appendixpage
-\include{A_Anexo1}
-%
-%
+%-------------------------------------------------------------------------------
+\renewcommand{\bibname}{Referencias}
+%-------------------------------------------------------------------------------
 \nocite{*}
 \bibliography{Tesis}
 \bibliographystyle{unsrtnat}
-%
+%-------------------------------------------------------------------------------
+\renewcommand{\appendixname}{Anexo}
+\renewcommand{\appendixtocname}{Anexos}
+\renewcommand{\appendixpagename}{Anexos}
+\clearpage
+\appendix
+\clearpage
+\appendixpage
+\include{A_Anexo1}
 %
 \clearpage
 \addcontentsline{toc}{chapter}{Índice alfabético}
