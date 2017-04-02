@@ -17,7 +17,7 @@ GLS=${TEXBIN}/makeglossaries
 IDX=${TEXBIN}/makeindex
 IDY=${TEXBIN}/texindy
 ```
-Esta configuración funciona bien para la instalación de MacTeX, pero podría no funcionar en Linux. Una vez que tienes todos los paquetes de LaTeX necesarios instalados en tu sistema debes ejecutar el siguiente comando (el $ es el promtp del sistema, no lo debes escribir):
+Esta configuración funciona bien para la instalación de MacTeX, pero podría no funcionar en Linux, para sistemas Windows recomiendo utilizar MikTex con TeXnicCenter, sin embargo los scripts en el repositorio no funcionarán ya que requieren de una shell tipo UNIX. Una vez que tienes todos los paquetes de LaTeX necesarios instalados en tu sistema debes ejecutar el siguiente comando (el $ es el promtp del sistema, no lo debes escribir):
 ```bash
 $ ./compile.sh
 ```
