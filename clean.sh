@@ -15,6 +15,7 @@ mainfile=$1
 if [ -f ${mainfile}.pdf ]; then
   rm -rf ${mainfile}.acn \
     ${mainfile}.acr \
+    ${mainfile}.acn \
     ${mainfile}.alg \
     ${mainfile}.bbl \
     ${mainfile}.blg \
@@ -27,6 +28,7 @@ if [ -f ${mainfile}.pdf ]; then
     ${mainfile}.lof \
     ${mainfile}.log \
     ${mainfile}.lot \
+    ${mainfile}.out \
     ${mainfile}.pdf \
     ${mainfile}.toc \
     ${mainfile}.xdy
